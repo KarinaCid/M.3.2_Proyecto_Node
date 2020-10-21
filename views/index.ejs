@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <!-- Local CSS-->
+ <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Mi Formulario en Express</h1>
+    <form action="/users" method="POST">
+      <label for="">Nombre</label>
+      <input name="name" type="text" />
+      <label for="">Apellido</label>
+      <input name="lastname" type="text" />
+      <label for="">Contraseña</label>
+      <input name="password" type="password" />
+      <input type="submit" />
+    </form>
+    <h1>Lista de usuarios</h1>
+    <div>
+      <ul>
+        <% result.forEach(function(user){ %>
+          <li><%= user.name %> <%= user.lastname %> </li>
+        <% }); %>
+      </ul>
+    </div>
+    
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+         
+  </body>
+</html>
+<!-- Motor de template -->
